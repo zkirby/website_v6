@@ -1,7 +1,8 @@
 import React from "react";
+import MoviesList from "./moviesList"
 
 const componentRegistry = {
-  Home: <div></div>,
+  Home: MoviesList,
   Other: <div> yoooo </div>,
 };
 
