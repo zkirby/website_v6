@@ -1,3 +1,13 @@
+/* Main page grid styling */
 .main-row {
   height: 100vh;
+}
+
+.main-col {
+  padding: 35px;
+}
+
+.right-col, .left-col {
+  padding-left: 35px !important;
+  padding-right: 35px !important;
 }

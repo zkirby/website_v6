@@ -12,22 +12,18 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class HomePage extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      leftSide: <DefaultLeftSide />,
-      rightSide: <DefaultRightSide />,
-    };
-  }
+  state = {
+    leftSide: <DefaultLeftSide />,
+    rightSide: <DefaultRightSide />,
+  };
 
   setLeftSide = (leftSide) => {
     return this.setState({ leftSide });
-  }
+  };
 
   setRightSide = (rightSide) => {
     return this.setState({ rightSide });
-  }
+  };
 
   render() {
     const { leftSide, rightSide } = this.state;
@@ -37,7 +33,10 @@ export default class HomePage extends React.Component {
         <Row className="main-row">
           <Col className="left-col main-col">{leftSide}</Col>
           <Col className="right-col main-col">
-            <RightSideSelector setLeftSide={this.setLeftSide} setRightSide={this.setRightSide} />
+            <RightSideSelector
+              setLeftSide={this.setLeftSide}
+              setRightSide={this.setRightSide}
+            />
             {rightSide}
           </Col>
         </Row>
