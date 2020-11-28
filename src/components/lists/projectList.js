@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class MoviesList extends React.Component {
+export default className MoviesList extends React.Component {
   componentDidMount() {
     this.props.setLeftSide(this.moviePreview());
   }

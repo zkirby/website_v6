@@ -7,7 +7,45 @@
   padding: 35px;
 }
 
-.right-col, .left-col {
-  padding-left: 35px !important;
-  padding-right: 35px !important;
+.side-container {
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.right-col .float-container {
+  height: 80vh;
+  box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.19);
+  border-radius: 5px;
+}
+
+/* Right side selector */
+.right-side-selector {
+  cursor: pointer;
+}
+
+.right-side-selector .not-selected:hover  {
+  opacity: 1;
+}
+
+.right-side-selector .selected-side {
+  font-weight: bold;
+}
+
+.right-side-selector .not-selected {
+  opacity: 0.8;
+}
+
+/* Default left side */
+.default-left a {
+  display: block;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.default-left .self-image {
+  height: 300px;
+    width: 300px;
+    object-fit: cover;
+    object-position: top;
+    border: 4px solid black;
 }

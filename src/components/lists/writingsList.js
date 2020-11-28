@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class WritingList extends React.Component {
+export default className WritingList extends React.Component {
   componentDidMount() {
     this.props.setLeftSide(this.moviePreview());
   }
