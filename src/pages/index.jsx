@@ -1,8 +1,6 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Col, Row } from "react-bootstrap";
 
 import DefaultLeftSide from "../components/leftSide";
 import ParticipationList from "../components/lists/ParticipationList";
@@ -15,19 +13,22 @@ export default class HomePage extends React.Component {
   constructor() {
     super();
 
-    this.state ={ 
+    this.state = {
       leftSide: <DefaultLeftSide />,
-    rightSide: <ParticipationList setLeftSide={this.setLeftSide} />,
-    }
+      rightSide: (
+        <ParticipationList
+          setLeftSide={this.setLeftSide}
+          resetLeftSide={this.resetLeftSide}
+        />
+      ),
+    };
   }
 
-  setLeftSide = (leftSide) => {
-    return this.setState({ leftSide });
-  };
+  resetLeftSide = () => this.setState({ leftSide: <DefaultLeftSide /> });
 
-  setRightSide = (rightSide) => {
-    return this.setState({ rightSide });
-  };
+  setLeftSide = (leftSide) => this.setState({ leftSide });
+
+  setRightSide = (rightSide) => this.setState({ rightSide });
 
   render() {
     const { leftSide, rightSide } = this.state;
@@ -42,10 +43,11 @@ export default class HomePage extends React.Component {
             <div className="side-container">
               <RightSideSelector
                 setLeftSide={this.setLeftSide}
+                resetLeftSide={this.resetLeftSide}
                 setRightSide={this.setRightSide}
                 SelectedSide={rightSide}
               />
-              <div className="float-container">{rightSide}</div>
+              <div className="float-container overflow-auto">{rightSide}</div>
             </div>
           </Col>
         </Row>

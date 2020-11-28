@@ -1,13 +1,14 @@
 import React from "react";
 
 import { Container, Image } from "react-bootstrap";
-import Self from '../images/self.jpg';
+import Self from "../images/self.jpg";
 
 import Emoji from "./Emoji";
+
 // Maybe this emoji instead? 🔍
 const LeftSide = () => (
   <Container className="default-left">
-    <Image className="self-image" src={Self} roundedCircle/>
+    <Image className="self-image" src={Self} roundedCircle />
     <h1>
       Zachary Kirby <Emoji symbol="⏳" label="rocket" />
     </h1>

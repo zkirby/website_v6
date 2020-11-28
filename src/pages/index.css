@@ -1,3 +1,6 @@
+/* ---------------------- */
+/* General Styling */
+/* ---------------------- */
 /* Main page grid styling */
 .main-row {
   height: 100vh;
@@ -14,16 +17,21 @@
 
 .right-col .float-container {
   height: 80vh;
-  box-shadow: 5px 5px 15px 4px rgba(0,0,0,0.19);
+  box-shadow: 5px 5px 15px 4px rgba(0, 0, 0, 0.19);
   border-radius: 5px;
+}
+
+/* Shared Atomic styles */
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /* Right side selector */
 .right-side-selector {
-  cursor: pointer;
+  letter-spacing: 1px;
 }
 
-.right-side-selector .not-selected:hover  {
+.right-side-selector .not-selected:hover {
   opacity: 1;
 }
 
@@ -35,17 +43,31 @@
   opacity: 0.8;
 }
 
+/* ---------------------- */
+/* Sides */
+/* ---------------------- */
 /* Default left side */
 .default-left a {
-  display: block;
-  margin-top: 10px;
+  margin-right: 25px;
   width: fit-content;
 }
 
 .default-left .self-image {
   height: 300px;
-    width: 300px;
-    object-fit: cover;
-    object-position: top;
-    border: 4px solid black;
+  width: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Participation List */
+.past-divider .divider {
+  width: 48%;
+  height: 2px;
+  background: darkgray;
+}
+
+.past-divider .divider-text {
+  margin: 0 5px 0 5px;
+  color: darkgray;
+  font-style: italic;
 }

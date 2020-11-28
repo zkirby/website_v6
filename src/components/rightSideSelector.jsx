@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
 // import MoviesList from "./lists/moviesList";
 // import ProjectList from "./lists/projectList";
 // import WritingsList from "./lists/writingsList";
-import ParticipationList from "./lists/ParticipationList";
+import ParticipationList from './lists/ParticipationList';
 
 // Launch when there are at least two tabs
 const componentRegistry = {
   // should description be three breakdowns for the different things and then you can filter
   // by what the actual thing is.
-  Participation: {
+  participation: {
     Component: ParticipationList,
-    description: "Involvement | Organizations | ",
+    description: 'Involvement | Organizations | ',
   },
   // Projects: {} (Build when I have more projects I want to showcase)
   // Hobbies: {}, (Might consider putting up if the other things are too blank)
@@ -23,26 +23,27 @@ const componentRegistry = {
   // },
 };
 
-const RightSideSelector = ({ setLeftSide, setRightSide, SelectedSide }) => {
+const RightSideSelector = ({
+  setLeftSide, resetLeftSide, setRightSide, SelectedSide,
+}) => {
+  console.log(SelectedSide);
   const rightSides = Object.entries(componentRegistry).map(
     ([title, { Component, description }]) => (
       <div
-        className={`ml-2 ${SelectedSide?.name === Component.name ? 'selected-side' : 'not-selected'}`}
+        className={`mr-2 cursor-pointer ${
+          SelectedSide?.name === Component.name
+            ? 'selected-side'
+            : 'not-selected'
+        }`}
         key={title}
-        onClick={() =>
-          setRightSide(<Component setLeftSide={setLeftSide} />)
-        }
+        onClick={() => setRightSide(<Component setLeftSide={setLeftSide} resetLeftSide={resetLeftSide} />)}
       >
         {title}
       </div>
-    )
-  )
-
-  return (
-    <div className="d-flex right-side-selector">
-      {rightSides}
-    </div>
+    ),
   );
+
+  return rightSides.length > 1 ? <div className="d-flex mb-3 right-side-selector">{rightSides}</div> : <div />;
 };
 
 export default RightSideSelector;
