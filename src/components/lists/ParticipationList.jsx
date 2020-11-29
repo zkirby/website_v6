@@ -1,6 +1,10 @@
 import React from "react";
 import { Container, Card } from "react-bootstrap";
 
+// import Markdown from "../utils/Markdown";
+
+// import pdMd from "../../writings/productiv.md";
+
 const CARD_TYPES = {
   CAREER: "CAREER",
   ORGANIZATION: "ORGANIZATION",
@@ -10,7 +14,7 @@ const CARD_TYPES = {
   FILM: "FILM",
   OTHER: "OTHER",
   ACADEMIA: "ACADEMIA",
-  COMMUNITY_SERVICE: "COMMUNITY_SERVICE",
+  COMMUNITY_SERVICE: "COMMUNITY SERVICE",
   POLITICS: "POLITICS",
 };
 
@@ -21,6 +25,7 @@ const CURRENT_CARDS = [
     role: "FE Developer",
     dates: "Feb 2020 - Current",
     link: "https://productiv.com/",
+    // mdLink: pdMd,
     oneLine: "Early hire working on the FE team",
     description: "Something something something.",
   },
@@ -204,51 +209,60 @@ const PAST_CARDS = [
 ];
 
 export default class ParticipationList extends React.Component {
-  state = {
-    cardSelection: undefined,
-    holdPreview: false,
-  };
+  constructor() {
+    super();
 
-  setCardPreview(description, respectPreview = false) {
+    this.state = {
+      cardSelection: undefined,
+      filters: [],
+    };
+  }
+
+  setCardPreview(description) {
     const { setLeftSide } = this.props;
-    const { holdPreview } = this.state;
-    if (holdPreview && respectPreview) return;
 
     setLeftSide(<div>{description}</div>);
     this.setState({
       cardSelection: description,
-      holdPreview: !respectPreview && true,
     });
   }
 
-  clearPreview(respectPreview = false) {
+  toggleFilter(filter) {
+    this.setState((prevState) => {
+      const prevFilters = prevState.filters || [];
+      const filterIndex = prevFilters.indexOf(filter);
+
+      if (filterIndex > -1) {
+        prevFilters.splice(filterIndex, 1);
+        return { filters: prevFilters };
+      }
+      return { filters: [...prevFilters, filter] };
+    });
+  }
+
+  clearPreview() {
     const { resetLeftSide } = this.props;
-    const { holdPreview } = this.state;
-    if (holdPreview && respectPreview) return;
 
     resetLeftSide();
     this.setState({
       cardSelection: undefined,
-      holdPreview: !respectPreview && false,
     });
   }
 
-  renderCard({ title, role, dates, link, oneLine, description }) {
+  renderCard({ title, role, dates, link, oneLine, description, mdLink }) {
     const { cardSelection } = this.state;
-    // eslint-disable-next-line arrow-body-style
-    const togglePreview = (respectPreview) => () => {
-      if (cardSelection === description) this.clearPreview(respectPreview);
-      else this.setCardPreview(description, respectPreview);
+    const togglePreview = () => {
+      if (cardSelection === description) this.clearPreview();
+      else this.setCardPreview(description, mdLink);
     };
 
     return (
       <Card
         key={title}
-        onClick={togglePreview()}
-        onMouseEnter={togglePreview(true)}
-        onMouseLeave={togglePreview(true)}
-        border={cardSelection === description ? "success" : "secondary"}
-        className="cursor-pointer mb-4"
+        onClick={togglePreview}
+        className={`cursor-pointer mb-4 card-selection ${
+          cardSelection === description ? "text-white bg-dark" : ""
+        }`}
       >
         <Card.Body>
           <Card.Title>
@@ -267,20 +281,45 @@ export default class ParticipationList extends React.Component {
   }
 
   renderCareerList() {
-    const filteredCurrentCards = CURRENT_CARDS;
-    const filteredPastCards = PAST_CARDS;
+    const { filters } = this.state;
+    const filteredCurrentCards = !filters.length
+      ? CURRENT_CARDS
+      : CURRENT_CARDS.filter(({ type }) =>
+          type?.some((value) => filters.includes(value))
+        );
+    const filteredPastCards = !filters.length
+      ? PAST_CARDS
+      : PAST_CARDS.filter(({ type }) =>
+          type?.some((value) => filters.includes(value))
+        );
 
     return (
       <Container className="participation-list">
-        <div className="current-list pt-3">
-          {filteredCurrentCards.map(this.renderCard.bind(this))}
+        <div className="d-flex flex-wrap mt-2 pill-container">
+          {Object.values(CARD_TYPES).map((title) => (
+            <div
+              className={`pill ${filters.includes(title) ? "on-pill" : ""}`}
+              onClick={() => this.toggleFilter(title)}
+            >
+              {title.toLocaleLowerCase()}
+            </div>
+          ))}
         </div>
-        {filteredCurrentCards.length && (
+        {filteredCurrentCards.length ? (
+          <div className="current-list pt-3">
+            {filteredCurrentCards.map(this.renderCard.bind(this))}
+          </div>
+        ) : (
+          ""
+        )}
+        {filteredCurrentCards.length ? (
           <div className="past-divider d-flex align-items-center">
             <div className="divider" />
             <div className="divider-text">past</div>
             <div className="divider" />
           </div>
+        ) : (
+          ""
         )}
         <div className="past-list mt-4">
           {filteredPastCards.map(this.renderCard.bind(this))}

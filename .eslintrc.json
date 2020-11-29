@@ -13,11 +13,8 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "arrow-body-style": ["error", "never"],
+    "arrow-body-style": 0,
     "prettier/prettier": ["error"],
-    // This has been recommend by Dan himself, not sure why this
-    // comes as a rule...
-    "react/state-in-constructor": ["error", "never"],
     // Ain't no body got time to write prop types
     // for a personal side project.
     "react/prop-types": 0

@@ -59,6 +59,14 @@
   object-position: top;
 }
 
+.default-left .self-image {
+  margin-bottom: 25px;
+}
+
+.default-left p {
+  width: 80%;
+}
+
 /* Participation List */
 .past-divider .divider {
   width: 48%;
@@ -70,4 +78,26 @@
   margin: 0 5px 0 5px;
   color: darkgray;
   font-style: italic;
+}
+
+.participation-list .card-selection:hover {
+  box-shadow: 5px 5px 15px 4px rgba(0, 0, 0, 0.19);
+  transition: 0.2s;
+}
+
+.participation-list .pill {
+  border: 1px solid black;
+  width: fit-content;
+  height: 40px;
+  margin: 0 10px 10px 0px;
+  border-radius: 5px;
+  padding: 6px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.participation-list .on-pill {
+  opacity: 1;
+  background: black;
+  color: white;
 }

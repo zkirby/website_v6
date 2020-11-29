@@ -2,9 +2,9 @@ import React from "react";
 
 import { Container, Col, Row } from "react-bootstrap";
 
-import DefaultLeftSide from "../components/leftSide";
+import DefaultLeftSide from "../components/DefaultLeftSide";
 import ParticipationList from "../components/lists/ParticipationList";
-import RightSideSelector from "../components/rightSideSelector";
+import RightSideSelector from "../components/RightSideSelector";
 
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
