@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 
 import { Container, Col, Row } from "react-bootstrap";
 
@@ -22,6 +23,9 @@ export default class HomePage extends React.Component {
         />
       ),
     };
+
+    // Pls don't hate 4 adding analytics - just wanna see how many people pop by...
+    ReactGA.initialize("G-F7J1T9CBZ4");
   }
 
   resetLeftSide = () => this.setState({ leftSide: <DefaultLeftSide /> });
@@ -36,10 +40,10 @@ export default class HomePage extends React.Component {
     return (
       <Container fluid>
         <Row className="main-row">
-          <Col className="left-col main-col">
+          <Col className="left-col main-col col-7 col-md-6">
             <div className="side-container">{leftSide}</div>
           </Col>
-          <Col className="right-col main-col">
+          <Col className="right-col main-col col-6 col-md-6">
             <div className="side-container">
               <RightSideSelector
                 setLeftSide={this.setLeftSide}
