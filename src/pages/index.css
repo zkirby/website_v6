@@ -1,6 +1,33 @@
 /* ---------------------- */
 /* General Styling */
 /* ---------------------- */
+/* All styles */
+:root {
+  --c-red: #ef476f;
+  --c-yellow: #ffd166;
+  --c-green: #06d6a0;
+  --c-blue: #118ab2;
+  --c-darkgray: #073b4c;
+}
+
+a {
+  color: var(--c-blue) !important;
+  font-weight: bold;
+}
+a:visited {
+  color: var(--c-darkgray);
+  opacity: 0.6;
+  font-weight: normal;
+}
+a:hover {
+  color: var(--c-yellow) !important;
+  opacity: 0.6;
+}
+
+body {
+  overflow: hidden;
+}
+
 /* Main page grid styling */
 .main-row {
   height: 100vh;
@@ -13,12 +40,6 @@
 .side-container {
   width: 40vw;
   margin: 0 auto;
-}
-
-.right-col .float-container {
-  height: 80vh;
-  box-shadow: 5px 5px 15px 4px rgba(0, 0, 0, 0.19);
-  border-radius: 5px;
 }
 
 /* Shared Atomic styles */
@@ -86,18 +107,29 @@
 }
 
 .participation-list .pill {
-  border: 1px solid black;
   width: fit-content;
   height: 40px;
   margin: 0 10px 10px 0px;
-  border-radius: 5px;
-  padding: 6px;
+  border-radius: 15px;
+  padding: 0px 15px 0px 15px;
+  line-height: 38px;
+  letter-spacing: 2px;
   cursor: pointer;
-  opacity: 0.8;
+  background: var(--c-blue);
+  color: white;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.participation-list .pill:hover {
+  opacity: 1;
 }
 
 .participation-list .on-pill {
   opacity: 1;
-  background: black;
-  color: white;
+}
+
+.participation-list .text-pill {
+  opacity: 0.4;
+  margin: 10px 10px 0px 0px;
 }

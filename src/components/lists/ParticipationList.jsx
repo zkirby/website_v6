@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from "react";
 import ReactGA from "react-ga";
 import { Container, Card } from "react-bootstrap";
 
-import { TRACKING_EVENT } from "../utils/constants";
+import { TRACKING_EVENT, COLOR_POOL } from "../utils/constants";
 
 // import Markdown from "../utils/Markdown";
 
@@ -21,6 +23,14 @@ const CARD_TYPES = {
   POLITICS: "politics",
 };
 
+const TIMES = {
+  SEM_SENIOR_YEAR: "Aug 2019 - May 2020",
+  SUMMER_JUNIOR_YEAR: "May 2019 - Aug 2019",
+  SEM_JUNIOR_YEAR: "Aug 2018 - May 2019",
+  SUMMER_SOUPH_YEAR: "May 2018 - Aug 2018",
+  SEM_SOUPH_YEAR: "Aug 2017 - May 2018",
+};
+
 const CURRENT_CARDS = [
   {
     title: "Productiv",
@@ -30,16 +40,10 @@ const CURRENT_CARDS = [
     link: "https://productiv.com/",
     // mdLink: pdMd,
     oneLine:
-      "Accel backed Series B startup focused on Saas Management. I'm currently an early hire (<30) working on the FE team.",
+      "Accel backed Series B startup focused on Saas Management. I'm currently an early hire working on the FE team.",
     description: "Something something something.",
   },
 ];
-const TIMES = {
-  SUMMER_JUNIOR_YEAR: "May 2019 - Aug 2019",
-  SUMMER_SOUPH_YEAR: "May 2018 - Aug 2018",
-  SEM_SOUPH_YEAR: "Aug 2017 - May 2018",
-  SEM_JUNIOR_YEAR: "Aug 2018 - May 2019",
-};
 
 const PAST_CARDS = [
   {
@@ -73,6 +77,21 @@ const PAST_CARDS = [
     description: "Something something something.",
   },
   {
+    title: "Accel Scholars",
+    role: "Scholar",
+    type: [
+      CARD_TYPES.ORGANIZATION,
+      CARD_TYPES.ENTREPRENEURIAL,
+      CARD_TYPES.AWARD,
+    ],
+    dates: TIMES.SEM_SOUPH_YEAR,
+    link:
+      "https://techcrunch.com/2017/11/01/accel-launches-uc-berkeley-mentorship-program/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAJ0h4xfiCPAogIKNrFY7NvBWbsw2VCw4y9IzjyrUxY7pHb-K0doTtKrK8ceFEnNHf2M-TUauNoXAasNq0ROsZMHBHDRi1htbnUA7EfskYjbr2Iwf2oqEMTPQrSNhxtJnsueZapie6jKJPe4AjbfOaH80qMgoVTy2OONN8NiPPQGJ",
+    oneLine:
+      "Cal based entrepreneurial program hosted by notable VC Accel. Was part of the inaugural class",
+    description: "Something something something.",
+  },
+  {
     title: "Facebook",
     role: "FE Intern",
     type: [CARD_TYPES.CAREER, CARD_TYPES.WEBDEV],
@@ -83,12 +102,23 @@ const PAST_CARDS = [
     description: "Something something something.",
   },
   {
-    title: "ZS Blockchain",
-    role: "Partner",
-    type: [CARD_TYPES.CAREER, CARD_TYPES.ENTREPRENEURIAL],
-    dates: TIMES.SEM_SOUPH_YEAR,
-    link: "https://www.crunchbase.com/organization/zs-blockchain",
-    oneLine: "First (and last) Blockchain venture leading event coordination.",
+    title: "Student Technology Fund",
+    role: "Council Member",
+    type: [CARD_TYPES.ORGANIZATION, CARD_TYPES.POLITICS],
+    dates: TIMES.SEM_SENIOR_YEAR,
+    link: "https://techfund.berkeley.edu/about/committee-and-staff",
+    oneLine:
+      "The STF is a multi-million dollar fund derived from student tuition and created to endorse and fund student based technology endeavors ranging from Hackathons to upgrading the technology of under-resourced communities",
+    description: "Something something something.",
+  },
+  {
+    title: "Professor Hearst's HCI/NLP Lab",
+    role: "Research Assistant to Dr. Andrew Head",
+    type: [CARD_TYPES.ACADEMIA, CARD_TYPES.WEBDEV],
+    dates: TIMES.SEM_SENIOR_YEAR,
+    link: "https://scholarphi.org/",
+    oneLine:
+      "As part of the ScholarPhi team I worked on a myriad of tasks including spearheading much of the FE feature development, undergrad UX research, and custom scripting a Tobii 4C eye-tracker for usability",
     description: "Something something something.",
   },
   {
@@ -112,6 +142,26 @@ const PAST_CARDS = [
     description: "Something something something.",
   },
   {
+    title: "Regents And Chancellor's Scholarship Association",
+    role: "RHOP Member",
+    type: [CARD_TYPES.AWARD, CARD_TYPES.ACADEMIA, CARD_TYPES.ORGANIZATION],
+    dates: "Aug 2016 - May 2020",
+    link: "https://rcsa.berkeley.edu/",
+    oneLine:
+      "RCSA is the essentially the UCs systems token way of luring talent (read: people good at writing essays and filling out applications) away from other prestigious schools.",
+    description: "Something something something.",
+  },
+  {
+    title: "ASUC",
+    role: "Chief of Staff",
+    type: [CARD_TYPES.ORGANIZATION, CARD_TYPES.POLITICS],
+    dates: "Aug 2018 - May 2020",
+    link: "https://asuc.org/",
+    oneLine:
+      "I held many roles during my roughly ~2 years in the ASUC, most notably the Chief of Staff for the Tech Senator.",
+    description: "Something something something.",
+  },
+  {
     title: "Kairos",
     role: "Fellow",
     type: [CARD_TYPES.ENTREPRENEURIAL],
@@ -122,28 +172,32 @@ const PAST_CARDS = [
     description: "Something something something.",
   },
   {
-    title: "Accel Scholars",
-    role: "Scholar",
-    type: [
-      CARD_TYPES.ORGANIZATION,
-      CARD_TYPES.ENTREPRENEURIAL,
-      CARD_TYPES.AWARD,
-    ],
-    dates: TIMES.SEM_SOUPH_YEAR,
-    link:
-      "https://techcrunch.com/2017/11/01/accel-launches-uc-berkeley-mentorship-program/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAJ0h4xfiCPAogIKNrFY7NvBWbsw2VCw4y9IzjyrUxY7pHb-K0doTtKrK8ceFEnNHf2M-TUauNoXAasNq0ROsZMHBHDRi1htbnUA7EfskYjbr2Iwf2oqEMTPQrSNhxtJnsueZapie6jKJPe4AjbfOaH80qMgoVTy2OONN8NiPPQGJ",
+    title: "ANova",
+    role: "Curriculum Chair",
+    type: [CARD_TYPES.ORGANIZATION, CARD_TYPES.COMMUNITY_SERVICE],
+    dates: "Jan 2017 - May 2020",
+    link: "https://www.berkeleyanova.org/",
     oneLine:
-      "Cal based entrepreneurial program hosted by notable VC Accel. Was part of the inaugural class",
+      "ANova is an organization dedicated to bringing technology awareness and education to local underserved youth in the Bay Area.",
     description: "Something something something.",
   },
   {
-    title: "VR @ Berkeley",
-    role: "360 VR Film Team",
-    type: [CARD_TYPES.ORGANIZATION, CARD_TYPES.FILM],
-    dates: TIMES.SEM_SOUPH_YEAR,
-    link: "https://xr.berkeley.edu/",
+    title: "Cinebears",
+    role: "Web Chair",
+    type: [CARD_TYPES.FILM, CARD_TYPES.WEBDEV, CARD_TYPES.ORGANIZATION],
+    dates: TIMES.SEM_SENIOR_YEAR,
+    link: "https://cinebears.berkeley.edu/",
     oneLine:
-      "Part of the 360 film team where we experimented with the emerging medium.",
+      "Cinebears is the premier club at Berkeley for all things film related. During my time at Cinebears I created and maintained the organizations first personal website.",
+    description: "Something something something.",
+  },
+  {
+    title: "ZS Blockchain",
+    role: "Partner",
+    type: [CARD_TYPES.CAREER, CARD_TYPES.ENTREPRENEURIAL],
+    dates: TIMES.SEM_SOUPH_YEAR,
+    link: "https://www.crunchbase.com/organization/zs-blockchain",
+    oneLine: "First (and last) Blockchain venture leading event coordination.",
     description: "Something something something.",
   },
   {
@@ -167,68 +221,23 @@ const PAST_CARDS = [
     description: "Something something something.",
   },
   {
-    title: "ASUC",
-    role: "Chief of Staff",
-    type: [CARD_TYPES.ORGANIZATION, CARD_TYPES.POLITICS],
-    dates: "Aug 2018 - May 2020",
-    link: "https://asuc.org/",
+    title: "VR @ Berkeley",
+    role: "360 VR Film Team",
+    type: [CARD_TYPES.ORGANIZATION, CARD_TYPES.FILM],
+    dates: TIMES.SEM_SOUPH_YEAR,
+    link: "https://xr.berkeley.edu/",
     oneLine:
-      "I held many roles during my roughly ~2 years in the ASUC, most notably the Chief of Staff for the Tech Senator.",
-    description: "Something something something.",
-  },
-  {
-    title: "Regents And Chancellor's Scholarship Association",
-    role: "RHOP Member",
-    type: [CARD_TYPES.AWARD, CARD_TYPES.ACADEMIA, CARD_TYPES.ORGANIZATION],
-    dates: "Aug 2016 - May 2020",
-    link: "https://rcsa.berkeley.edu/",
-    oneLine:
-      "RCSA is the essentially the UCs systems token way of luring talent (read: people good at writing essays and filling out applications) away from other prestigious schools.",
+      "Part of the 360 film team where we experimented with the emerging medium.",
     description: "Something something something.",
   },
   {
     title: "Gymnastics",
-    role: "FE Developer",
+    role: "Competitor",
     type: [CARD_TYPES.OTHER],
-    dates: "Feb 2020 - Current",
-    link: "https://productiv.com/",
-    oneLine: "Early hire working on the FE team",
-    description: "Something something something.",
-  },
-  {
-    title: "ANova",
-    role: "FE Developer",
-    type: [CARD_TYPES.ORGANIZATION, CARD_TYPES.COMMUNITY_SERVICE],
-    dates: "Feb 2020 - Current",
-    link: "https://productiv.com/",
-    oneLine: "Early hire working on the FE team",
-    description: "Something something something.",
-  },
-  {
-    title: "Cinebears",
-    role: "FE Developer",
-    type: [CARD_TYPES.FILM, CARD_TYPES.WEBDEV, CARD_TYPES.ORGANIZATION],
-    dates: "Feb 2020 - Current",
-    link: "https://productiv.com/",
-    oneLine: "Early hire working on the FE team",
-    description: "Something something something.",
-  },
-  {
-    title: "Student Technology Fund",
-    role: "FE Developer",
-    type: [CARD_TYPES.ORGANIZATION, CARD_TYPES.POLITICS],
-    dates: "Feb 2020 - Current",
-    link: "https://productiv.com/",
-    oneLine: "Early hire working on the FE team",
-    description: "Something something something.",
-  },
-  {
-    title: "Professor Hearst's HCI/NLP Lab",
-    role: "FE Developer",
-    type: [CARD_TYPES.ACADEMIA, CARD_TYPES.WEBDEV],
-    dates: "Feb 2020 - Current",
-    link: "https://productiv.com/",
-    oneLine: "Early hire working on the FE team",
+    dates: "Year 2 - Year 13",
+    link: "http://www.meetscoresonline.com/Athlete.MyScores/221031",
+    oneLine:
+      "I was a competitive gymnast for most of my early life. From gymnastics I learned drive, determination, and how to do cool tricks on trampolines.",
     description: "Something something something.",
   },
 ];
@@ -241,16 +250,36 @@ export default class ParticipationList extends React.Component {
       cardSelection: undefined,
       filters: [],
     };
+
+    this.colorMap = Object.values(CARD_TYPES).reduce((cMap, key, i) => {
+      cMap[key] = COLOR_POOL[i % (COLOR_POOL.length + 1)];
+      return cMap;
+    }, {});
   }
 
   setCardPreview(description) {
-    const { setLeftSide } = this.props;
+    // TODO: Turn off card selection until markdown is enabled
+    // const { setLeftSide } = this.props;
 
-    setLeftSide(<div>{description}</div>);
+    // setLeftSide(<div>{description}</div>);
     this.setState({
       cardSelection: description,
     });
   }
+
+  createTextPill = (title) => {
+    const { filters } = this.state;
+    const { colorMap } = this;
+    const styleObj = filters.includes(title)
+      ? { opacity: 1, color: colorMap[title] }
+      : {};
+
+    return (
+      <div key={title} style={styleObj} className="text-pill">
+        {title}
+      </div>
+    );
+  };
 
   toggleFilter(filter) {
     this.setState((prevState) => {
@@ -280,11 +309,15 @@ export default class ParticipationList extends React.Component {
 
   renderCard({ title, role, type, dates, link, oneLine, description, mdLink }) {
     const { cardSelection } = this.state;
+    const { createTextPill } = this;
     const togglePreview = () => {
-      if (cardSelection === description) this.clearPreview();
-      else this.setCardPreview(description, mdLink);
+      window.open(link);
+      //   if (cardSelection === description) this.clearPreview();
+      //   else this.setCardPreview(description, mdLink);
     };
 
+    // TODO: When markdown aspects are enabled,
+    // turn on card selection
     return (
       <Card
         key={title}
@@ -295,20 +328,16 @@ export default class ParticipationList extends React.Component {
       >
         <Card.Body>
           <Card.Title>
-            <a href={link} target="_blank" rel="noreferrer">
-              {title}
-            </a>
+            {/* <a href={link} target="_blank" rel="noreferrer"> */}
+            {title}
+            {/* </a> */}
           </Card.Title>
           <Card.Subtitle className="role text-muted">{role}</Card.Subtitle>
           <Card.Subtitle className="dates mt-1 text-muted">
             {dates}
           </Card.Subtitle>
           <Card.Subtitle className="d-flex">
-            {type?.map((t) => (
-              <div key={t} className="pill">
-                {t}
-              </div>
-            ))}
+            {type?.map((t) => createTextPill(t))}
           </Card.Subtitle>
           <Card.Text className="oneLine mt-3">{oneLine}</Card.Text>
         </Card.Body>
@@ -318,6 +347,7 @@ export default class ParticipationList extends React.Component {
 
   renderCareerList() {
     const { filters } = this.state;
+    const { colorMap } = this;
     const filteredCurrentCards = !filters.length
       ? CURRENT_CARDS
       : CURRENT_CARDS.filter(({ type }) =>
@@ -332,15 +362,22 @@ export default class ParticipationList extends React.Component {
     return (
       <Container className="participation-list">
         <div className="d-flex flex-wrap mt-2 pill-container">
-          {Object.values(CARD_TYPES).map((title) => (
-            <div
-              key={title}
-              className={`pill ${filters.includes(title) ? "on-pill" : ""}`}
-              onClick={() => this.toggleFilter(title)}
-            >
-              {title}
-            </div>
-          ))}
+          {Object.values(CARD_TYPES).map((title) => {
+            const isOnPill = filters.includes(title);
+            const styleObj = isOnPill
+              ? { backgroundColor: colorMap[title] }
+              : {};
+            return (
+              <div
+                key={title}
+                className={`pill ${isOnPill ? "on-pill" : ""}`}
+                style={styleObj}
+                onClick={() => this.toggleFilter(title)}
+              >
+                {title}
+              </div>
+            );
+          })}
         </div>
         {filteredCurrentCards.length ? (
           <div className="current-list pt-3">
