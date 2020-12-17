@@ -8,6 +8,7 @@
   --c-green: #06d6a0;
   --c-blue: #118ab2;
   --c-darkgray: #073b4c;
+  --c-background: #fbf7eb;
 }
 
 a {
@@ -24,13 +25,16 @@ a:hover {
   opacity: 0.6;
 }
 
-body {
+body,
+#___gatsby {
   overflow: hidden;
+  background-color: var(--c-background);
 }
 
 /* Main page grid styling */
 .main-row {
   height: 100vh;
+  padding: 0 10% 0 10%;
 }
 
 .main-col {
@@ -110,7 +114,7 @@ body {
   width: fit-content;
   height: 40px;
   margin: 0 10px 10px 0px;
-  border-radius: 15px;
+  border-radius: 100px;
   padding: 0px 15px 0px 15px;
   line-height: 38px;
   letter-spacing: 2px;
@@ -133,3 +137,15 @@ body {
   opacity: 0.4;
   margin: 10px 10px 0px 0px;
 }
+
+.participation-list .card-lists {
+  overflow-y: scroll;
+  height: 100vh;
+  padding-bottom: 400px;
+}
+
+/* .participation-list .fade-bar {
+  width: 100%;
+  height: 4px;
+  background: rgb(0, 0, 0);
+} */

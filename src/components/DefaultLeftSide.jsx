@@ -8,7 +8,9 @@ import Emoji from "./utils/Emoji";
 // Maybe this emoji instead? 🔍
 const LeftSide = () => (
   <Container className="default-left">
-    <Image className="self-image" src={Self} roundedCircle />
+    <a href="http://cathleenmjia.com/">
+      <Image className="self-image" src={Self} roundedCircle />
+    </a>
     <h1>
       Zachary Kirby 
 {' '}
@@ -23,7 +25,7 @@ const LeftSide = () => (
       <Emoji symbol="😊" label="smile" />
     </p> */}
     <p className="text-secondary">
-      Outside of work I enjoy writing, talking-watching-writing films, learning
+      Off the web I enjoy writing, talking-watching-writing films, learning
       languages, and practicing social distancing.
     </p>
     <a href="https://drive.google.com/a/berkeley.edu/file/d/1NcNQ4Z8nVl6Nro3bgpwU07zbAE9gFYl7/view?usp=sharing">

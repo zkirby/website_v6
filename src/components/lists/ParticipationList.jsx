@@ -379,24 +379,27 @@ export default class ParticipationList extends React.Component {
             );
           })}
         </div>
-        {filteredCurrentCards.length ? (
-          <div className="current-list pt-3">
-            {filteredCurrentCards.map(this.renderCard.bind(this))}
+        {/* <div className="fade-bar" /> */}
+        <div className="card-lists">
+          {filteredCurrentCards.length ? (
+            <div className="current-list pt-3">
+              {filteredCurrentCards.map(this.renderCard.bind(this))}
+            </div>
+          ) : (
+            ""
+          )}
+          {filteredCurrentCards.length ? (
+            <div className="past-divider d-flex align-items-center">
+              <div className="divider" />
+              <div className="divider-text">past</div>
+              <div className="divider" />
+            </div>
+          ) : (
+            ""
+          )}
+          <div className="past-list mt-4">
+            {filteredPastCards.map(this.renderCard.bind(this))}
           </div>
-        ) : (
-          ""
-        )}
-        {filteredCurrentCards.length ? (
-          <div className="past-divider d-flex align-items-center">
-            <div className="divider" />
-            <div className="divider-text">past</div>
-            <div className="divider" />
-          </div>
-        ) : (
-          ""
-        )}
-        <div className="past-list mt-4">
-          {filteredPastCards.map(this.renderCard.bind(this))}
         </div>
       </Container>
     );
