@@ -11,7 +11,7 @@ import { TRACKING_EVENT, COLOR_POOL } from "../utils/constants";
 // import pdMd from "../../writings/productiv.md";
 
 const CARD_TYPES = {
-  CAREER: "carrer",
+  CAREER: "career",
   ORGANIZATION: "organization",
   ENTREPRENEURIAL: "entrepreneurial",
   AWARD: "award",
@@ -21,6 +21,11 @@ const CARD_TYPES = {
   ACADEMIA: "academia",
   COMMUNITY_SERVICE: "community service",
   POLITICS: "politics",
+};
+
+const CARD_CATEGORIES = {
+  PROF_LIFE: "professional life",
+  PERF_LIFE: "personal life",
 };
 
 const TIMES = {

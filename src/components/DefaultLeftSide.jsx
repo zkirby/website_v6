@@ -25,7 +25,7 @@ const LeftSide = () => (
       <Emoji symbol="😊" label="smile" />
     </p> */}
     <p className="text-secondary">
-      Off the web I enjoy writing, talking-watching-writing films, learning
+      Off the web I enjoy writing, watching and talking about films, learning
       languages, and practicing social distancing.
     </p>
     <a href="https://drive.google.com/a/berkeley.edu/file/d/1NcNQ4Z8nVl6Nro3bgpwU07zbAE9gFYl7/view?usp=sharing">
