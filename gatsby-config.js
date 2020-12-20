@@ -31,5 +31,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto Condensed`, `Cabin`],
+        display: "swap",
+      },
+    },
   ],
 };

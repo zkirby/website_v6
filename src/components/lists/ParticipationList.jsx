@@ -1,8 +1,21 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable no-return-assign */
 import React from "react";
 import ReactGA from "react-ga";
 import { Container, Card } from "react-bootstrap";
+import {
+  FaGraduationCap,
+  FaCoffee,
+  FaUsers,
+  FaLightbulb,
+  FaGlobeAmericas,
+  FaMedal,
+  FaQuestion,
+  FaLaptopCode,
+  FaLandmark,
+} from "react-icons/fa";
+import { BsFilm } from "react-icons/bs";
 
 import { TRACKING_EVENT, COLOR_POOL } from "../utils/constants";
 
@@ -23,9 +36,40 @@ const CARD_TYPES = {
   POLITICS: "politics",
 };
 
+const CARD_ICONS = {
+  [CARD_TYPES.CAREER]: FaCoffee,
+  [CARD_TYPES.ORGANIZATION]: FaUsers,
+  [CARD_TYPES.ENTREPRENEURIAL]: FaLightbulb,
+  [CARD_TYPES.AWARD]: FaMedal,
+  [CARD_TYPES.WEBDEV]: FaLaptopCode,
+  [CARD_TYPES.FILM]: BsFilm,
+  [CARD_TYPES.OTHER]: FaQuestion,
+  [CARD_TYPES.ACADEMIA]: FaGraduationCap,
+  [CARD_TYPES.COMMUNITY_SERVICE]: FaGlobeAmericas,
+  [CARD_TYPES.POLITICS]: FaLandmark,
+};
+
 const CARD_CATEGORIES = {
-  PROF_LIFE: "professional life",
-  PERF_LIFE: "personal life",
+  PROF_LIFE: {
+    label: "professional life",
+    types: [
+      CARD_TYPES.CAREER,
+      CARD_TYPES.ENTREPRENEURIAL,
+      CARD_TYPES.AWARD,
+      CARD_TYPES.ACADEMIA,
+      CARD_TYPES.WEBDEV,
+    ],
+  },
+  PERF_LIFE: {
+    label: "personal life",
+    types: [
+      CARD_TYPES.ORGANIZATION,
+      CARD_TYPES.FILM,
+      CARD_TYPES.OTHER,
+      CARD_TYPES.COMMUNITY_SERVICE,
+      CARD_TYPES.POLITICS,
+    ],
+  },
 };
 
 const TIMES = {
@@ -276,14 +320,11 @@ export default class ParticipationList extends React.Component {
     const { filters } = this.state;
     const { colorMap } = this;
     const styleObj = filters.includes(title)
-      ? { opacity: 1, color: colorMap[title] }
+      ? { opacity: 1, background: colorMap[title] }
       : {};
+    const Icon = CARD_ICONS[title];
 
-    return (
-      <div key={title} style={styleObj} className="text-pill">
-        {title}
-      </div>
-    );
+    return <Icon key={title} style={styleObj} className="font-icon" />;
   };
 
   toggleFilter(filter) {
@@ -332,18 +373,22 @@ export default class ParticipationList extends React.Component {
         }`}
       >
         <Card.Body>
-          <Card.Title>
-            {/* <a href={link} target="_blank" rel="noreferrer"> */}
-            {title}
-            {/* </a> */}
-          </Card.Title>
-          <Card.Subtitle className="role text-muted">{role}</Card.Subtitle>
-          <Card.Subtitle className="dates mt-1 text-muted">
-            {dates}
-          </Card.Subtitle>
-          <Card.Subtitle className="d-flex">
-            {type?.map((t) => createTextPill(t))}
-          </Card.Subtitle>
+          <div className="d-flex justify-content-between">
+            <div>
+              <Card.Title>
+                {/* <a href={link} target="_blank" rel="noreferrer"> */}
+                <h3>{title}</h3>
+                {/* </a> */}
+              </Card.Title>
+              <Card.Subtitle className="role text-muted">{role}</Card.Subtitle>
+              <Card.Subtitle className="dates mt-1 text-muted">
+                {dates}
+              </Card.Subtitle>
+            </div>
+            <div className="text-pills">
+              {type?.map(createTextPill.bind(this))}
+            </div>
+          </div>
           <Card.Text className="oneLine mt-3">{oneLine}</Card.Text>
         </Card.Body>
       </Card>

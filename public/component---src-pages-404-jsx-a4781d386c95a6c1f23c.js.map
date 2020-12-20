@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.jsx"],"names":["FourOFour"],"mappings":"2FAAA,gCAIeA,UAFG,kBAAM","file":"component---src-pages-404-jsx-a4781d386c95a6c1f23c.js","sourcesContent":["import React from \"react\";\n\nconst FourOFour = () => <div>Nothin to see here folks, go home.</div>;\n\nexport default FourOFour;\n"],"sourceRoot":""}

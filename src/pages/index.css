@@ -3,12 +3,16 @@
 /* ---------------------- */
 /* All styles */
 :root {
+  /* Colors */
   --c-red: #ef476f;
   --c-yellow: #ffd166;
   --c-green: #06d6a0;
   --c-blue: #118ab2;
   --c-darkgray: #073b4c;
   --c-background: #fbf7eb;
+  /* Font Settings */
+  --f-primary-font: "Playfair Display", Serif;
+  --f-secondary-font: "Source Sans Pro";
 }
 
 a {
@@ -106,8 +110,12 @@ body,
 }
 
 .participation-list .card-selection:hover {
-  box-shadow: 5px 5px 15px 4px rgba(0, 0, 0, 0.19);
+  background: linear-gradient(180deg, var(--c-blue) 0%, white 100%);
   transition: 0.2s;
+}
+
+.participation-list .card-selection {
+  border: none;
 }
 
 .participation-list .pill {
@@ -133,15 +141,26 @@ body,
   opacity: 1;
 }
 
-.participation-list .text-pill {
-  opacity: 0.4;
-  margin: 10px 10px 0px 0px;
-}
-
 .participation-list .card-lists {
   overflow-y: scroll;
   height: 100vh;
   padding-bottom: 400px;
+}
+
+.participation-list .text-pills {
+  width: 65px;
+  text-align: right;
+}
+
+.participation-list .font-icon {
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 100px;
+  color: white;
+  padding: 6px;
+  opacity: 0.6;
+  margin: 0px 2px 2px 0px;
 }
 
 /* .participation-list .fade-bar {

@@ -9,7 +9,13 @@ import Emoji from "./utils/Emoji";
 const LeftSide = () => (
   <Container className="default-left">
     <a href="http://cathleenmjia.com/">
-      <Image className="self-image" src={Self} roundedCircle />
+      <Image
+        width="300"
+        height="300"
+        className="self-image"
+        src={Self}
+        roundedCircle
+      />
     </a>
     <h1>
       Zachary Kirby 
