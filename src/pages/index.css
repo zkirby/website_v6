@@ -81,6 +81,13 @@ body,
   width: fit-content;
 }
 
+.default-left .about-me-link a {
+  /* Copied from bootstrap, leaving it here so don't try to use it
+  outside of this specific use case. */
+  color: #6c757d !important;
+  font-weight: normal;
+}
+
 .default-left .self-image {
   height: 300px;
   width: 300px;
@@ -107,11 +114,6 @@ body,
   margin: 0 5px 0 5px;
   color: darkgray;
   font-style: italic;
-}
-
-.participation-list .card-selection:hover {
-  background: linear-gradient(180deg, var(--c-blue) 0%, white 100%);
-  transition: 0.2s;
 }
 
 .participation-list .card-selection {
@@ -163,11 +165,20 @@ body,
   margin: 0px 2px 2px 0px;
 }
 
-/* .participation-list .fade-bar {
-  width: 100%;
-  height: 4px;
-  background: rgb(0, 0, 0);
-} */
+/* ---------------------- */
+/* Writings */
+/* ---------------------- */
+.writing-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.writing-container .writing-content {
+  margin: 0 auto;
+  width: 60vw;
+  margin-top: 30px;
+  position: relative;
+}
 
 /* ---------------------- */
 /* Mobile responsiveness */

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import { Container, Image } from "react-bootstrap";
 import Self from "../images/self.jpg";
@@ -26,14 +27,16 @@ const LeftSide = () => (
       Hi there! My name is Zach, I'm a web developer passionate about using
       technology to make the world a better place.
     </p>
-    {/* <p className="text-secondary">
-      If you're interested in a learning a little more
-      <Emoji symbol="😊" label="smile" />
-    </p> */}
     <p className="text-secondary">
       Off the web I enjoy writing, watching and talking about films, learning
       languages, and practicing social distancing.
     </p>
+    {/* <p className="text-secondary about-me-link">
+      <Link to="/writing/about-me">
+        If you're interested in a learning a little more{" "}
+        <Emoji symbol="😊" label="smile" />
+      </Link>
+    </p> */}
     <a href="https://drive.google.com/a/berkeley.edu/file/d/1NcNQ4Z8nVl6Nro3bgpwU07zbAE9gFYl7/view?usp=sharing">
       Resume
     </a>
