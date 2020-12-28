@@ -19,24 +19,23 @@ const LeftSide = () => (
       />
     </a>
     <h1>
-      Zachary Kirby 
-{' '}
-<Emoji class="ml-2" symbol="🔍" label="hourglass" />
+      Zachary Kirby
+      <Emoji className="ml-2" symbol="🔍" label="hourglass" />
     </h1>
     <p>
       Hi there! My name is Zach, I'm a web developer passionate about using
       technology to make the world a better place.
     </p>
     <p className="text-secondary">
-      Off the web I enjoy writing, watching and talking about films, learning
-      languages, and practicing social distancing.
+      Off the web I enjoy writing, cinema, learning languages, and music. If
+      you're interested in learning a little more -
+      <span className="ml-1">
+        <Link className="about-me-link" to="/writing/about-me">
+          look here
+          {/* <Emoji className="ml-1" symbol="😊" label="smile" /> */}
+        </Link>
+      </span>
     </p>
-    {/* <p className="text-secondary about-me-link">
-      <Link to="/writing/about-me">
-        If you're interested in a learning a little more{" "}
-        <Emoji symbol="😊" label="smile" />
-      </Link>
-    </p> */}
     <a href="https://drive.google.com/a/berkeley.edu/file/d/1NcNQ4Z8nVl6Nro3bgpwU07zbAE9gFYl7/view?usp=sharing">
       Resume
     </a>

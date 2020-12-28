@@ -1,10 +1,10 @@
 import React from "react";
 
-const Emoji = ({ label, symbol }) => (
+const Emoji = ({ label, symbol, className }) => (
   <span
-    className="emoji"
+    className={`emoji ${className}`}
     role="img"
-    aria-label={label ? label : ""}
+    aria-label={label || ""}
     aria-hidden={label ? "false" : "true"}
   >
     {symbol}

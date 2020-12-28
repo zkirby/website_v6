@@ -1,7 +1,7 @@
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const Markdown = require.resolve(`./src/components/utils/Markdown.jsx`);
+  const Markdown = require.resolve(`./src/components/Markdown.jsx`);
 
   return graphql(`
     {

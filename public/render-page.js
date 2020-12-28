@@ -138,7 +138,7 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-google-fonts/gatsby-ssr */ "./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "fonts": ["Roboto Condensed", "Cabin"],
+    "fonts": ["Open Sans", "Alegreya", "Playfair Display", "Lora"],
     "display": "swap"
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:

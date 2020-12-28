@@ -10,9 +10,11 @@
   --c-blue: #118ab2;
   --c-darkgray: #073b4c;
   --c-background: #fbf7eb;
+  --c-black: #041b25;
+  --c-grey: grey;
   /* Font Settings */
-  --f-primary-font: "Playfair Display", Serif;
-  --f-secondary-font: "Source Sans Pro";
+  --f-primary-font: "Playfair Display";
+  --f-secondary-font: "Open Sans";
 }
 
 a {
@@ -33,6 +35,7 @@ body,
 #___gatsby {
   overflow: hidden;
   background-color: var(--c-background);
+  height: 100vh;
 }
 
 /* Main page grid styling */
@@ -81,11 +84,10 @@ body,
   width: fit-content;
 }
 
-.default-left .about-me-link a {
+.default-left .about-me-link {
   /* Copied from bootstrap, leaving it here so don't try to use it
   outside of this specific use case. */
   color: #6c757d !important;
-  font-weight: normal;
 }
 
 .default-left .self-image {
@@ -168,22 +170,74 @@ body,
 /* ---------------------- */
 /* Writings */
 /* ---------------------- */
+/* Writing meta */
 .writing-container {
   width: 100vw;
   height: 100vh;
+  color: var(--c-black);
 }
 
 .writing-container .writing-content {
   margin: 0 auto;
   width: 60vw;
-  margin-top: 30px;
+  top: 30px;
   position: relative;
 }
+
+.floating-home {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  font-size: 1.5em;
+  color: var(--c-black) !important;
+}
+
+/* Writing fluff */
+.writing-container .writing-fluff-selector {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.writing-container .writing-fluff-selector span {
+  cursor: pointer;
+  opacity: 0.5;
+  margin-left: 10px;
+}
+
+.writing-container .writing-fluff-selector .active-fluff,
+.writing-container .writing-fluff-selector span:hover {
+  opacity: 1;
+}
+
+/* Writing text section */
+.writing-container .writing-text {
+  font-family: var(--f-primary-font);
+  line-height: 1.7em;
+}
+
+.writing-container .writing-text div,
+.writing-container .writing-text p {
+  font-family: var(--f-secondary-font);
+}
+
+.writing-container .writing-text h1 {
+  margin-bottom: 12px;
+}
+
+/* Special text */
+/* .writing-container .writing-text .preface {
+} */
 
 /* ---------------------- */
 /* Mobile responsiveness */
 /* ---------------------- */
 @media (max-width: 700px) {
+  body,
+  #__gatsby {
+    overflow: initial;
+  }
+
   .main-row {
     padding: 0;
   }
