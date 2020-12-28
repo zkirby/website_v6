@@ -179,7 +179,7 @@ body,
 
 .writing-container .writing-content {
   margin: 0 auto;
-  width: 60vw;
+  width: 55vw;
   top: 30px;
   position: relative;
 }
@@ -203,6 +203,7 @@ body,
   cursor: pointer;
   opacity: 0.5;
   margin-left: 10px;
+  font-family: var(--f-primary-font);
 }
 
 .writing-container .writing-fluff-selector .active-fluff,
