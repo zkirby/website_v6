@@ -28,10 +28,10 @@ const LeftSide = () => (
     </p>
     <p className="text-secondary">
       Off the web I enjoy writing, cinema, learning languages, and music. If
-      you're interested in learning a little more -
+      you're interested in learning a little more
       <span className="ml-1">
         <Link className="about-me-link" to="/writing/about-me">
-          look here
+          look here.
           {/* <Emoji className="ml-1" symbol="😊" label="smile" /> */}
         </Link>
       </span>
