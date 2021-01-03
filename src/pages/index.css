@@ -17,6 +17,12 @@
   --f-secondary-font: "Open Sans";
 }
 
+html,
+#___gatsby,
+body {
+  background: var(--c-background);
+}
+
 a {
   color: var(--c-blue) !important;
   font-weight: bold;
@@ -29,13 +35,6 @@ a:visited {
 a:hover {
   color: var(--c-yellow) !important;
   opacity: 0.6;
-}
-
-body,
-#___gatsby {
-  overflow: hidden;
-  background-color: var(--c-background);
-  height: 100vh;
 }
 
 /* Main page grid styling */
@@ -147,7 +146,7 @@ body,
 
 .participation-list .card-lists {
   overflow-y: scroll;
-  height: 100vh;
+  height: 65vh;
   padding-bottom: 400px;
 }
 
@@ -172,8 +171,8 @@ body,
 /* ---------------------- */
 /* Writing meta */
 .writing-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   color: var(--c-black);
 }
 
@@ -215,6 +214,7 @@ body,
 .writing-container .writing-text {
   font-family: var(--f-primary-font);
   line-height: 1.7em;
+  margin-bottom: 150px;
 }
 
 .writing-container .writing-text div,
