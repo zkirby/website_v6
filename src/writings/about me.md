@@ -16,21 +16,27 @@ I'm often drawn to the 'about' sections of people's websites. The web is natural
 ## Body
 
 #### Timeline
+A brief outline of all the various states and cities I've lived in. Having grown up in a military family, I've moved more times than most people my age. In my youth I considered these moves an unfortunate circumstance, but in adult hood I've grown to become extremely thankful of them. Living in the deeply conservative south TX to the extremely liberal Berkeley campus have afforded perspective and open mindedness that I am extremely grateful for.
+* NorCal - 2 years.
+  * I started my journey here on rocket ship earth on an air force base in NorCal. I don't remember much of my time there, other than one oddly specific memory of eating Zachary's Pizza for the first time. Quite delicious - I recommend the spinach and mushroom.
+* Minnesota - 2 years.
+  * Having grown too fond of warm, beautiful, sunny weather and scrumptious pizza, my parents set out to explore the great winter tundra that is Minnesota. I, again, have little recollection of this time period of my life, other than it was very cold, the snow was often above eye sight, and my one and only sibling was born.
+* San Antonio, TX - 7 years.
+  * Seeing as they'd had enough of the extreme cold, my folks decided they wanted to experience the polar opposite. And oh did TX deliver. This is really the first part of my life that I have significant memories of. My memories of TX are mostly fond - yet I distinctly remember being excited to leave, odd. If you've never been I highly recommend, San Antonio is actually one of the more vibrant and diverse (but still very conservative) parts of the state and there are a variety of amusements and landmarks from the River Walk to the Alamo that rival anything I've seen in other states. The most important thing I did in TX was start my 12 year long competitive gymnastics career that would go on to shape my drive and work ethic well into adulthood.  
+* Murrieta, CA - 8 years
+  * My last stop before college was the sunny bedroom community of Murrieta CA. Located about an hour north of SD, 2 hours south of LA, and another 1 and a half inland, Murrieta manages to be a safe and secure distance from anything of entertainment. In summary, Murrieta is a pleasantly boring place. I apologize if that offends any of my fellow inland-empirains, but that's just the cold hard truth. I won't drone on too much longer about Murrieta as my opinion of the place is probably pretty clear. Although seeing as Murrieta is the place I've lived the longest thus far, it does hold a special place in my heart. Murrieta is home to some of my favorite people and dearest friends and I am grateful for the relative quiet serenity it provides when I visit in comparison to the cities I currently reside.
+* Berkeley, CA - 4 years
+  * Go bears.
 
-<p class="body">
-Everything started on an otherwise un-notable sunday morning in early November. I was born on an Air-force base near Davis CA to a Methodist father raining from the great state of Nebraska and a Jewish mother originally from NY but more colorado based than anything. They
+#### Genealogy
 
-After a brief 2 year stint living in Davis, my family moved to Minnesota. Those of you familar with the lifestyle of Military families will recognize, correctly, that this is likely not our last move. I don't remember much of Minnesota, save the cold and snowy landscape, but I do feel a strange fabricated sense of nastoglia every time I watch Fargo. Save for my brother being born, Minnesota was an otherwise uneventful time in my life.
 
-Just as soon as we had arrived, we were packing our bags for another move - this time to radically warmer climate. We landed in San Antonio, TX in a relatively small county outside of the city. Here we would spend much of my early youth. The most significant aspect of my life was the competitive gymnastic career I began here that would have a relatively large impact on the rest of my life. Outside of sports I was a relatively shy and quiet elementary schooler. I wasn't particularly smart or gifted, nor did I have the swave and confidence necessary to be a 'cool' kid.
+#### Off the Web
+I wanted to carve out space for this mostly because I always enjoy hearing/reading about other people's hobbies, but also because I think it's important to dedicate space to something other than the usual humdrum of work life you see so often on 'personal' websites. Below are the hobbies and post-work activities I've been dedicating the most amount of time to as of this writing.
+* _Cinema_: Movies have been always been a huge part of my life and at one point I thought they would be my life pursuit (I now have a 3/4 finished film major for my efforts). I enjoy all aspects of film from production to theory but I spend most of my free time watching, discussing, and writing about them. 
+* 
 
-</p>
 
-#### Family Background
-
-#### Hobbies
-
-#### Current life
 
 ---
 
