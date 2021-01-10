@@ -20,7 +20,7 @@ A brief outline of all the various states and cities I've lived in. Having grown
 * NorCal - 2 years.
   * I started my journey here on rocket ship earth on an air force base in NorCal. I don't remember much of my time there, other than one oddly specific memory of eating Zachary's Pizza for the first time. Quite delicious - I recommend the spinach and mushroom.
 * Minnesota - 2 years.
-  * Having grown too fond of warm, beautiful, sunny weather and scrumptious pizza, my parents set out to explore the great winter tundra that is Minnesota. I, again, have little recollection of this time period of my life, other than it was very cold, the snow was often above eye sight, and my one and only sibling was born.
+  * Having grown too fond of warm, beautiful, sunny weather and scrumptious pizza, my parents set out to explore the great winter tundra that is Minnesota. I, again, have little recollection of this time period of my life, other than it was very cold, the snow was often above eye-level, and my one and only sibling was born.
 * San Antonio, TX - 7 years.
   * Seeing as they'd had enough of the extreme cold, my folks decided they wanted to experience the polar opposite. And oh did TX deliver. This is really the first part of my life that I have significant memories of. My memories of TX are mostly fond - yet I distinctly remember being excited to leave, odd. If you've never been I highly recommend, San Antonio is actually one of the more vibrant and diverse (but still very conservative) parts of the state and there are a variety of amusements and landmarks from the River Walk to the Alamo that rival anything I've seen in other states. The most important thing I did in TX was start my 12 year long competitive gymnastics career that would go on to shape my drive and work ethic well into adulthood.  
 * Murrieta, CA - 8 years
@@ -28,16 +28,8 @@ A brief outline of all the various states and cities I've lived in. Having grown
 * Berkeley, CA - 4 years
   * Go bears.
 
-#### Genealogy
-
-
 #### Off the Web
 I wanted to carve out space for this mostly because I always enjoy hearing/reading about other people's hobbies, but also because I think it's important to dedicate space to something other than the usual humdrum of work life you see so often on 'personal' websites. Below are the hobbies and post-work activities I've been dedicating the most amount of time to as of this writing.
 * _Cinema_: Movies have been always been a huge part of my life and at one point I thought they would be my life pursuit (I now have a 3/4 finished film major for my efforts). I enjoy all aspects of film from production to theory but I spend most of my free time watching, discussing, and writing about them. 
-* 
+* Language Learning: Towards the end of college, I enrolled in an introductory Chinese language class in order to fulfill part of the Film Major requirements. 2 years later I've not only continued my interest in learning Mandarin Chinese, but have begun learning other languages as well.
 
-
-
----
-
-## Parting thoughts
