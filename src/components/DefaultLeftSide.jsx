@@ -20,7 +20,7 @@ const LeftSide = () => (
     </a>
     <h1>
       Zachary Kirby
-      <Emoji className="ml-2" symbol="🔍" label="hourglass" />
+      {/* <Emoji className="ml-2" symbol="🔍" label="hourglass" /> */}
     </h1>
     <p>
       Hi there! My name is Zach, I'm a web developer passionate about using

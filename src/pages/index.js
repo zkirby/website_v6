@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import { Container, Col, Row } from "react-bootstrap";
 
 import DefaultLeftSide from "../components/DefaultLeftSide";
-import ParticipationList from "../components/lists/ParticipationList";
+import WritingList from "../components/lists/WritingList";
 import RightSideSelector from "../components/RightSideSelector";
 
 import "./index.css";
@@ -19,7 +19,7 @@ export default class HomePage extends React.Component {
     this.state = {
       leftSide: <DefaultLeftSide />,
       rightSide: (
-        <ParticipationList
+        <WritingList
           setLeftSide={this.setLeftSide}
           resetLeftSide={this.resetLeftSide}
         />

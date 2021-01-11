@@ -21,6 +21,11 @@ html,
 #___gatsby,
 body {
   background: var(--c-background);
+  /* font-family: var(--c-secondary-font) !important; */
+}
+
+h1 {
+  /* font-family: var(--c-primary-font) !important; */
 }
 
 a {
