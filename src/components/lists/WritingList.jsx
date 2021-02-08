@@ -18,12 +18,39 @@ export default function WritingList() {
     }
   `);
 
+  const writings = data.allMarkdownRemark.edges.map((w) => ({
+    path: w.node.frontmatter.slug,
+    name: w.node.frontmatter.slug.split("/").slice(2),
+  }));
+
+  const group = (allWritings) => {
+    const groups = {};
+
+    allWritings.forEach((w) => {
+      const key = w.name.shift();
+
+      if (groups[key]) {
+        groups[key].push(w);
+      } else if (w.name.length) {
+        groups[key] = [w];
+      }
+    });
+
+    return groups;
+  };
+
   return (
     <Container>
-      {data.allMarkdownRemark.edges.map(({ node: { frontmatter } }) => {
+      {Object.entries(group(writings)).map(([title, slugs]) => {
         return (
-          <div>
-            <Link to={frontmatter.slug}>{frontmatter.slug}</Link>
+          <div key={title}>
+            <div className="writing-link-title">{title}</div>
+
+            {slugs.map((slug) => (
+              <li key={slug.path} className="writing-link">
+                <Link to={slug.path}>{slug.name.pop()}</Link>
+              </li>
+            ))}
           </div>
         );
       })}
