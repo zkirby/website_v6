@@ -5,8 +5,9 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---src-components-markdown-jsx": hot(preferDefault(require("/Users/kirby/Desktop/web-dev/website/zkirby.github.io/src/components/Markdown.jsx"))),
-  "component---src-pages-404-jsx": hot(preferDefault(require("/Users/kirby/Desktop/web-dev/website/zkirby.github.io/src/pages/404.jsx"))),
-  "component---src-pages-index-js": hot(preferDefault(require("/Users/kirby/Desktop/web-dev/website/zkirby.github.io/src/pages/index.js")))
+  "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/kirby/Desktop/web-dev/website/website_v6/.cache/dev-404-page.js"))),
+  "component---src-components-markdown-jsx": hot(preferDefault(require("/Users/kirby/Desktop/web-dev/website/website_v6/src/components/Markdown.jsx"))),
+  "component---src-pages-404-jsx": hot(preferDefault(require("/Users/kirby/Desktop/web-dev/website/website_v6/src/pages/404.jsx"))),
+  "component---src-pages-index-js": hot(preferDefault(require("/Users/kirby/Desktop/web-dev/website/website_v6/src/pages/index.js")))
 }
 
