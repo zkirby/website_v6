@@ -1,0 +1,212 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.27.4"/><title data-react-helmet="true"></title><link rel="icon" href="/favicon-32x32.png?v=31eae1aa78e3f17d34648ed1eeca7da5" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=31eae1aa78e3f17d34648ed1eeca7da5"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=31eae1aa78e3f17d34648ed1eeca7da5"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=31eae1aa78e3f17d34648ed1eeca7da5"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=31eae1aa78e3f17d34648ed1eeca7da5"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=31eae1aa78e3f17d34648ed1eeca7da5"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=31eae1aa78e3f17d34648ed1eeca7da5"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=31eae1aa78e3f17d34648ed1eeca7da5"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=31eae1aa78e3f17d34648ed1eeca7da5"/><link href="https://fonts.googleapis.com/css?family=Open+Sans|Alegreya|Playfair+Display|Lora&amp;display=swap" rel="stylesheet"/><link as="script" rel="preload" href="/webpack-runtime-fbc5945996f6854114a5.js"/><link as="script" rel="preload" href="/framework-dbb498007a7447f28d8e.js"/><link as="script" rel="preload" href="/app-75150d89c7ff1d2232b4.js"/><link as="script" rel="preload" href="/1bfc9850-1b2796ab789a489acafd.js"/><link as="script" rel="preload" href="/64a82b1a434290f4f2f3647a7b018702056c06c3-d6ff6ab58775dcebc214.js"/><link as="script" rel="preload" href="/component---src-components-markdown-jsx-8f36132320ea80b443e3.js"/><link as="fetch" rel="preload" href="/page-data/writing/programming/frontend/CSS Basics/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><a class="floating-home" href="/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="font-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg></a><div class="writing-container"><div class="writing-content"><div class="writing-fluff-selector"><span class="active-fluff">With fluff</span><span>|</span><span class="">A nice balance</span><span>|</span><span class="">Just the essentials</span></div><div class="writing-text"><h1>CSS Building Blocks</h1>
+<h3>Cascade and Inheritance</h3>
+<ul>
+<li>Not ever CSS property is inherited, for example width, margin, padding, and border. You can find what is and what isn't on the property reference page.</li>
+<li>
+<p>CSS provides four special universal property values for controlling inheritance that are accepted by every CSS property:</p>
+<ul>
+<li>inherit: 'turns on inheritance', i.e. sets the property to that of the parent. </li>
+<li>initial: sets the property value to the initial value (default value)</li>
+<li>unset: reset the property to its natural value so if it is inherited, the inherited value if not then the initial value.</li>
+<li>revert: also exists but with limited support.</li>
+</ul>
+</li>
+<li>You can use a shortcut 'all' to set all the properties at once (i.e. to inherit, or initial, etc).</li>
+<li>
+<p>There are three 'rule' sets by which the browser decided what CSS rule should be applied to a given element. The order of importance goes: Importance > Specificity > Source Order.</p>
+<ul>
+<li>Source order: Where in the source code the line of CSS is. Later ones overrule earlier ones.</li>
+<li>
+<p>Specificity: *, +, >, ~, etc and negation pseudo-class (not) have no effect on specificity. Specificity is simply an equation your browser uses, it is the equation: `specificity = (inline style) * 1000 + (each id selector) * 100 + (each class, attribute, and pseudo-class selector) * 10 + (element selector) * 1. That is the specificity of a single selector of CSS. </p>
+<ul>
+<li>If you need to overrule all the above calculations for whatever reason, you can use <code>!important</code>. It is strongly recommended that you never use it unless you absolutely have to. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Selectors</h3>
+<ul>
+<li>Element(s) that are selected by a given selector are called the 'subject of the selector' </li>
+<li>Best place to find supported selectors is here: <a href="https://www.w3.org/TR/selectors-3/">https://www.w3.org/TR/selectors-3/</a></li>
+<li>The types of selectors: Type, Universal, Class, Id, Attribute, Pseudo-class, Pseudo-element, Descendant, Child, Adjacent, General sibling.</li>
+</ul>
+<h3>The Box Model</h3>
+<ul>
+<li>
+<p>Two types of outer boxes: Inline and Block boxes.</p>
+<ul>
+<li>Block: Box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling goop 100% of the space available. Width and height are respected. Padding, margin, border will push other elements away from the box. * Inline: width and height do not apply. Vertical padding, margins, and borders will apply but not cause other inline boxes to move away from them. </li>
+</ul>
+</li>
+<li>
+<p>Inner display types: Normal and Flex (also grid) </p>
+<ul>
+<li>Normal: Just like block and inline</li>
+<li>Flex: Outer display type becomes block and inner is flex. Can also set to inline-flex to have the outer display become inline. </li>
+</ul>
+</li>
+<li>
+<p>Setting the width and height in the standard box model, only sets it on the content box. </p>
+<ul>
+<li>Box-sizing: border-box makes it so that padding and border are also included in this calculation.</li>
+</ul>
+</li>
+<li>Use negative margin to get things to overlap on the page.</li>
+<li>Margin collapsing: If two margins overlap then they collapse into one. I.e. if a margin of say 50 is touching that of a 30 then the total margin between the two elements is 50, not 80. If one is negative it subtracts from the total.</li>
+<li>There is no such thing as negative padding. </li>
+<li>
+<p>Display: Inline-block </p>
+<ul>
+<li>Allows for inline to respect width and height. </li>
+</ul>
+</li>
+</ul>
+<h3>Backgrounds and Borders</h3>
+<ul>
+<li>Background color extends underneath both padding and content.</li>
+<li>
+<p>Background-attachment: Allows you to specify how a background scrolls when the content scrolls. </p>
+<ul>
+<li>fixed: causes an elements background to be fixed to the view port, so that it doesn't scroll when the page or element content is scrolled. </li>
+</ul>
+</li>
+<li>You can pass in two values to border radius, one for the horizontal radius and one for the vertical radius.</li>
+</ul>
+<h3>Handling</h3>
+<ul>
+<li>Block orientation is tied to the writing mode of the screen not the layout. The inline dimension is always the direction a sentence flows. If you change the writing mode then you will also change the orientation of block and inline. </li>
+<li>Physical properties vs logical properties. Physical things like width, height, etc are agnostic of the block orientation and are tied to their physical direction, logical will respect the orientation and are called inline-size and block-size</li>
+<li>MDN predicts that most people will eventual transition to using logical properties. </li>
+</ul>
+<h3>Overflow</h3>
+<ul>
+<li><code>overflow: auto</code> allows you to let the browser decide to use scroll or not</li>
+<li>When you use a value of overflow like scroll or auto you create a Block Formatting Context (BFC).   </li>
+</ul>
+<h3>Values and units</h3>
+<ul>
+<li>Number data types: integer, number, dimension (a number + a unit), and percentage. </li>
+<li>Absolute length units: cm (96px/2.54), mm, Q (1/40th of a cm), in, pc (picas 1/6th of in), pt (points 1/72th of 1in), px (1/96th of 1in)</li>
+<li>Relative length units: em (font size of the parent), ex (x-height of the elements font), ch, rem (font size of root element), lh (line height), vmin (1% of the viewports smaller dimension), vmax (1% of the viewports larger dimension). </li>
+<li>RBGA vs opacity: Opacity makes the element opaque <em>and</em> everything in it whereas RGBA only make the color opaque.</li>
+</ul>
+<h3>Sizing items in CSS</h3>
+<ul>
+<li>When you use margin and padding set in percentages, the values is calculated from the inline size - therefor the width when working in a horizontal language. This allows for equal-size margins and padding all around the box.</li>
+<li>Max-width very useful for images. max-width: 100% = image is able to become smaller than its intrinsic size, but will stop at 100% of its size. </li>
+</ul>
+<h3>Images, Media, and Form elements</h3>
+<ul>
+<li>Images and videos are called replaced elements. Replaced elements are elements whose representation is outside the scope of CSS. </li>
+<li>letterboxing: when the image doesn't have the same aspect ratio as the container so when you scale it down, it looks like a movies screen.</li>
+<li>In some browsers, form elements do not inherit font styling by default.</li>
+<li>
+<p>Most people typically use this reset when dealing with forms:</p>
+<pre><code>button,
+input,
+select,
+textarea {
+font-family: inherit;
+font-size: 100%;
+box-sizing: border-box;
+padding: 0; margin: 0;
+}
+</code></pre>
+</li>
+</ul>
+<p>textarea {
+overflow: auto;
+}</p>
+<pre><code>### Styling Tables
+* You can select only even children with the selector: elem:nth-child(even) {}, same for odd.
+* Generally you want border-collapse: collapse for border that are touching, like in the case of a table.
+
+### Debugging CSS
+* General debugging tip: take a step back and work on something else or go for a walk for a second. 
+
+### Organizing Your CSS
+* MDN style guide https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS
+* Use a string that won't be used in the code to delineate sections so that you can easily jump between them. 
+
+# Styling Text 
+
+### Fundamental text and font styling 
+* The five default fonts: serif, sans-serif, mono space, cursive, fantasy.
+* Web safe fonts (fonts guaranteed to be on every computer): Arial, Courier New, Georgia, Times New Roman, Verdana. 
+    * all web safe fonts here: https://www.cssfontstack.com/
+* font-family: first font, second font, default, etc
+* Best practice: Give you root element a font size of 10 and then use rem to size all of your other fonts. 
+* you can auto add hyphens to your CSS word breaks with the hyphen property. 
+* font-variant: can be used for all sorts of things like making zeros slashed, making all caps, etc
+* text-rendering: the browser renders the text faster or cleaner depending on this setting.
+* text-indent: sets the length of empty space (indentation) that is put before lines of text in a block.
+
+### Styling lists
+* list-style-type: sets the type of bullets to use for the list, for example square or circle bullets, etc 
+* list-style-position: sets whether the bullets appear inside the list items, or outside them before the start of each item.
+* Several list specifications can be made such as starting from a number other than 1 (start) or reversing the list. 
+* You can set the exact value for the list item with the `value` attribute set on the &#x3C;li> items themselves.
+
+### Styling links
+* Order of the pseudo selectors for links maters because the styling will cascade into one another. 
+    * The order is :link, :visited, :focus, :hover, :active. 
+* You can easily add icons to your links instead of adding another div or something by using this CSS: a { background: url(....) no-repeat 100% 0 }. 
+
+# CSS Layout
+
+### Introduction to CSS layout 
+* Normal Flow: how the browser lays out HTML pages by default when you do nothing to control page layout. 
+* Flexbox is designed for one dimensional layout, whereas grid layout is designed for two dimensions (lining things up as rows and columns). 
+* Multi-column layout exists that works pretty much the same way that bootstrap columns work. 
+
+### Normal Flow 
+* The flow of the document with no CSS positioning. 
+* By default a block level element's content is 100% of the width of its parent element, and as tall as it's content. Vice versa for inline elements. 
+
+### Flexbox
+* Flex items are laid out along two axis. The main axis is the axis running in the direction the flex items are being laid out in (either rows or cols). Cross axis is the perpendicular axis. 
+* flex: allows you to size a flex item in relation to other flex items. A value of 1 on all of them and then 2 on a specific on would make that item twice as big. You can also defined a minimum size as a second unit.
+
+### Grid Layout
+* Explicit grid: the one you specify with grid-template-columns, etc. 
+* Implicit grid: the grid that gets created when content is placed outside of that grid. 
+* these concepts are similar to main and cross flexbox axis. 
+* you can use the minmax function with grids to specify both a min and max columns layout.
+
+### Floats
+* A floated element is taken out of the normal flow, and boxes of following items actually run behind the float. 
+* Use `clear` to force the other floated content from creeping up. 
+* You can use display: flow-root for adding a BFC to any block which can help in the case of clearing floats. 
+
+### Positioning 
+* margin collapsing doesn't effect positioned elements.
+* Initial containing block: the html element. 
+* &#x3C;dt> element is used to describe a term in a definitions list.
+
+### Multiple Column layout
+* Works very similar to bootstrap cols. Just add column-count and the browser automatically creates that many columns.
+* Have a div span through all of the columns by giving it the `column-span: all` property. 
+
+### Responsive Design
+* Fun fact, back in the day developers often had two sites, a regular web one and a mobile one (often with a url of m.example or exmaple.mobi).
+* Mobile first: have a single column and then when you test on web, add columns as need be.
+* You should never set text using viewport units alone as it prevents the user from being able to zoom in. To fix this, use calc( non-vw + vw ).
+
+### Media Queries
+* Can detect orientation, media type (print, etc), width/height.
+
+### Supporting older browsers
+* You should be able to ask yourself: "If I remove my stylesheet, does my website still make sense?"
+* flexbox has better support than grid.
+
+# Transitions 
+
+### Using CSS Transitions
+* Allow you to define the transition between two states of an element. 
+    * the states are defined by pseudo-classes (hover, active, etc). 
+* Implicit transitions: transitions that take place between two states. 
+* Not every property can be animated. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+* If you want to transition all properties, you can use `all` for the property name. 
+* You should be careful about using transitions immediately after removing an elements display: none. You can use setTimeout before using the transition to fix it. 
+</code></pre></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/writing/programming/frontend/CSS Basics";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-a0c9186328768889dad2.js"],"app":["/app-75150d89c7ff1d2232b4.js"],"component---src-components-markdown-jsx":["/component---src-components-markdown-jsx-8f36132320ea80b443e3.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-4f3215faed555098b80e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-513ba96c3c69e1710fd6.js"]};/*]]>*/</script><script src="/polyfill-a0c9186328768889dad2.js" nomodule=""></script><script src="/component---src-components-markdown-jsx-8f36132320ea80b443e3.js" async=""></script><script src="/64a82b1a434290f4f2f3647a7b018702056c06c3-d6ff6ab58775dcebc214.js" async=""></script><script src="/1bfc9850-1b2796ab789a489acafd.js" async=""></script><script src="/app-75150d89c7ff1d2232b4.js" async=""></script><script src="/framework-dbb498007a7447f28d8e.js" async=""></script><script src="/webpack-runtime-fbc5945996f6854114a5.js" async=""></script></body></html>

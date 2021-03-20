@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('/Users/kirby/Desktop/web-dev/website/website_v6/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/kirby/Desktop/web-dev/website/zkirby.github.io/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/kirby/Desktop/web-dev/website/website_v6/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/kirby/Desktop/web-dev/website/zkirby.github.io/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","icon":"src/images/favicon/favicon32.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"31eae1aa78e3f17d34648ed1eeca7da5"},
     },{
-      plugin: require('/Users/kirby/Desktop/web-dev/website/website_v6/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
+      plugin: require('/Users/kirby/Desktop/web-dev/website/zkirby.github.io/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":["Open Sans","Alegreya","Playfair Display","Lora"],"display":"swap"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
