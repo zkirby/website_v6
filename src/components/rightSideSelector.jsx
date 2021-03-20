@@ -42,7 +42,8 @@ const RightSideSelector = ({
               setLeftSide={setLeftSide}
               resetLeftSide={resetLeftSide}
             />
-          )}
+          )
+        }
       >
         {title.toLocaleLowerCase()}
       </div>

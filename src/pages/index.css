@@ -21,19 +21,21 @@ html,
 #___gatsby,
 body {
   background: var(--c-background);
-  /* font-family: var(--c-secondary-font) !important; */
+  font-family: var(--f-secondary-font) !important;
 }
 
 h1 {
-  /* font-family: var(--c-primary-font) !important; */
+  font-family: var(--f-primary-font);
 }
 
 a {
-  color: var(--c-darkgray) !important;
+  /* color: var(--c-darkgray) !important; */
+  color: black;
   font-weight: bold;
 }
 a:visited {
-  color: var(--c-darkgray);
+  /* color: var(--c-darkgray); */
+  color: black;
   opacity: 0.6;
   font-weight: normal;
 }
@@ -96,6 +98,11 @@ a:hover {
 /* Sides */
 /* ---------------------- */
 /* Default left side */
+.default-left {
+  /* need to override bootstrap */
+  width: 400px !important;
+}
+
 .default-left a {
   margin-right: 25px;
   width: fit-content;
@@ -116,10 +123,6 @@ a:hover {
 
 .default-left .self-image {
   margin-bottom: 25px;
-}
-
-.default-left p {
-  width: 80%;
 }
 
 /* Participation List */

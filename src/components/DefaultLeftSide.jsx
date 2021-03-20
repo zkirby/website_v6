@@ -26,16 +26,28 @@ const LeftSide = () => (
       Hi there! My name is Zach, I'm a web-enthusiast with a passion for
       web-performance, productivity, and people.
     </p>
-    <p className="text-secondary">
-      Off the web I enjoy writing, cinema, and learning languages. If you're
-      interested in learning a little more about me
-      <span className="ml-1">
-        <Link className="about-me-link" to="/writing/about-me">
-          look here.
-          {/* <Emoji className="ml-1" symbol="😊" label="smile" /> */}
-        </Link>
-      </span>
-    </p>
+    {false ? (
+      <p className="text-secondary">
+        Off the web I enjoy writing, cinema, and learning languages. If you're
+        interested in learning a little more about me
+        <span className="ml-1">
+          <Link className="about-me-link" to="/writing/about-me">
+            look here.
+            {/* <Emoji className="ml-1" symbol="😊" label="smile" /> */}
+          </Link>
+        </span>
+      </p>
+    ) : (
+      <p className="text-secondary">
+        Off the web I enjoy writing, cinema, and learning languages.
+      </p>
+    )}
+    {false && (
+      <p>
+        As of now, I'm a FE dev at Productiv, working on my Chinese, writing,
+        and working on other things.
+      </p>
+    )}
     <a href="https://drive.google.com/a/berkeley.edu/file/d/1NcNQ4Z8nVl6Nro3bgpwU07zbAE9gFYl7/view?usp=sharing">
       Resume
     </a>
