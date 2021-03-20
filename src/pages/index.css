@@ -52,6 +52,19 @@ a:hover {
   padding: 35px;
 }
 
+.right-col .side-container {
+  overflow-y: scroll;
+  height: 90vh;
+}
+.right-col .side-container::-webkit-scrollbar {
+  background: var(--c-background);
+  width: 10px;
+}
+.right-col .side-container::-webkit-scrollbar-thumb {
+  background: var(--c-grey); /* color of the tracking area */
+  border-radius: 100px;
+}
+
 .side-container {
   width: 40vw;
   margin: 0 auto;

@@ -23,12 +23,12 @@ const LeftSide = () => (
       {/* <Emoji className="ml-2" symbol="🔍" label="hourglass" /> */}
     </h1>
     <p>
-      Hi there! My name is Zach, I'm a web developer passionate about using
-      technology to make the world a better place.
+      Hi there! My name is Zach, I'm a web-enthusiast with a passion for
+      web-performance, productivity, and people.
     </p>
     <p className="text-secondary">
-      Off the web I enjoy writing, cinema, learning languages, and music. If
-      you're interested in learning a little more
+      Off the web I enjoy writing, cinema, and learning languages. If you're
+      interested in learning a little more about me
       <span className="ml-1">
         <Link className="about-me-link" to="/writing/about-me">
           look here.
