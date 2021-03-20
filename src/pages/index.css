@@ -30,12 +30,12 @@ h1 {
 
 a {
   /* color: var(--c-darkgray) !important; */
-  color: black;
+  color: var(--c-black);
   font-weight: bold;
 }
 a:visited {
   /* color: var(--c-darkgray); */
-  color: black;
+  color: var(--c-black);
   opacity: 0.6;
   font-weight: normal;
 }
@@ -264,7 +264,11 @@ a:hover {
 }
 
 .writing-link {
-  font-size: 14px;
+  font-size: 18px;
+}
+
+.writing-link a {
+  color: var(--c-black) !important;
 }
 
 /* Special text */

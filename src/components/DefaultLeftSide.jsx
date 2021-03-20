@@ -4,7 +4,8 @@ import { Link } from "gatsby";
 import { Container, Image } from "react-bootstrap";
 import Self from "../images/self.jpg";
 
-import Emoji from "./utils/Emoji";
+// import Emoji from "./utils/Emoji";
+import { SHOW_RIGHT_SIDE } from "./utils/constants";
 
 // Maybe this emoji instead? 🔍
 const LeftSide = () => (
@@ -26,7 +27,7 @@ const LeftSide = () => (
       Hi there! My name is Zach, I'm a web-enthusiast with a passion for
       web-performance, productivity, and people.
     </p>
-    {false ? (
+    {SHOW_RIGHT_SIDE ? (
       <p className="text-secondary">
         Off the web I enjoy writing, cinema, and learning languages. If you're
         interested in learning a little more about me
@@ -42,7 +43,7 @@ const LeftSide = () => (
         Off the web I enjoy writing, cinema, and learning languages.
       </p>
     )}
-    {false && (
+    {SHOW_RIGHT_SIDE && (
       <p>
         As of now, I'm a FE dev at Productiv, working on my Chinese, writing,
         and working on other things.
