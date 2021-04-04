@@ -3,6 +3,6 @@ export const TRACKING_EVENT = {
   BLOG_VISIT: "BLOG_VISIT",
 };
 
-export const COLOR_POOL = ["#ef476f", "#ffd166", "#06d6a0"];
+export const COLOR_POOL = ["#ef476f", "#118ab2", "#06d6a0"];
 
 export const SHOW_RIGHT_SIDE = true;

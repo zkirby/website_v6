@@ -1,6 +1,7 @@
 ---
 slug: "/writing/about-me"
 date: "2020-26-12"
+doNotList: true
 ---
 
 # Hello There.

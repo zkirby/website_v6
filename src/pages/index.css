@@ -190,6 +190,11 @@ a:hover {
 /* ---------------------- */
 /* Writings */
 /* ---------------------- */
+/* Writing links */
+.writing-link-container {
+  margin-top: 60px;
+}
+
 /* Writing meta */
 .writing-container {
   width: 100%;
@@ -239,7 +244,8 @@ a:hover {
 }
 
 .writing-container .writing-text div,
-.writing-container .writing-text p {
+.writing-container .writing-text p,
+.writing-container .writing-text li {
   font-family: var(--f-secondary-font);
 }
 
@@ -259,13 +265,20 @@ a:hover {
 
 .writing-link-title {
   margin-left: -15px !important;
-  font-size: 16px;
   font-weight: bold;
   font-family: var(--f-primary-font);
 }
 
-.writing-link {
-  font-size: 18px;
+.writing-link-subsection {
+  margin-left: -3px;
+}
+
+li.writing-link::marker {
+  color: inherit;
+}
+
+.writing-link a:hover {
+  color: inherit !important;
 }
 
 .writing-link a {

@@ -15,6 +15,7 @@ exports.createPages = ({ actions, graphql }) => {
               slug
               section
               subsection
+              doNotList
             }
           }
         }
@@ -34,6 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
           slug: node.frontmatter.slug,
           section: node.frontmatter.section,
           subsection: node.frontmatter.subsection,
+          doNotList: node.frontmatter.doNotList,
         },
       });
     });

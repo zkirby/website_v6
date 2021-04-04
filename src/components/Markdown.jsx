@@ -9,8 +9,7 @@ import { TRACKING_EVENT } from "./utils/constants";
 
 const FLUFF_LEVELS = {
   ALL: "With fluff",
-  MEDIUM: "A nice balance",
-  NONE: "Just the essentials",
+  NONE: "No fluff",
 };
 
 // const muteFluffLevels = fluffLevel => {
@@ -21,7 +20,9 @@ export default function Markdown({ data }) {
   const { markdownRemark } = data;
   const { html, slug } = markdownRemark;
   const [fluff, changeFluff] = useState(FLUFF_LEVELS.ALL);
-  const ALL_FLUFF = Object.values(FLUFF_LEVELS);
+  const ALL_FLUFF = html.includes('className="fluff"')
+    ? Object.values(FLUFF_LEVELS)
+    : [];
 
   useEffect(() => {
     console.log("tracking a blog visit");

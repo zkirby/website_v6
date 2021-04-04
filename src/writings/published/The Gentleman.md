@@ -1,6 +1,6 @@
 ---
 slug: "/writing/film/The Gentleman"
-section: "Film"
+section: "film"
 subsection: "1 Minute Reviews"
 date: "2021-04-03"
 ---
