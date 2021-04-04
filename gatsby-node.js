@@ -13,6 +13,8 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               slug
+              section
+              subsection
             }
           }
         }
@@ -30,6 +32,8 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           // additional data can be passed via context
           slug: node.frontmatter.slug,
+          section: node.frontmatter.section,
+          subsection: node.frontmatter.subsection,
         },
       });
     });

@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { Container } from "react-bootstrap";
+import { groupBy, mapValues, map, split, last } from "lodash";
 
 export default function WritingList() {
   const data = useStaticQuery(graphql`
@@ -11,6 +12,8 @@ export default function WritingList() {
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               slug
+              section
+              subsection
             }
           }
         }
@@ -18,39 +21,44 @@ export default function WritingList() {
     }
   `);
 
-  const writings = data.allMarkdownRemark.edges.map((w) => ({
-    path: w.node.frontmatter.slug,
-    name: w.node.frontmatter.slug.split("/").slice(2),
-  }));
-
-  const group = (allWritings) => {
-    const groups = {};
-
-    allWritings.forEach((w) => {
-      const key = w.name.shift();
-
-      if (groups[key]) {
-        groups[key].push(w);
-      } else if (w.name.length) {
-        groups[key] = [w];
-      }
-    });
-
-    return groups;
-  };
+  const writings = mapValues(
+    groupBy(
+      data.allMarkdownRemark.edges.map(
+        ({
+          node: {
+            frontmatter: { slug, section, subsection },
+          },
+        }) => ({
+          path: slug,
+          name: last(split(slug, "/")),
+          section,
+          subsection,
+        })
+      ),
+      "section"
+    ),
+    (values) => groupBy(values, "subsection")
+  );
 
   return (
     <Container>
-      {Object.entries(group(writings)).map(([title, slugs]) => {
+      {map(writings, (subsections, section) => {
         return (
-          <div key={title}>
-            <div className="writing-link-title">{title}</div>
+          <div key={section}>
+            <h2 className="writing-link-title">{section}</h2>
 
-            {slugs.map((slug) => (
-              <li key={slug.path} className="writing-link">
-                <Link to={slug.path}>{slug.name.pop()}</Link>
-              </li>
-            ))}
+            {map(subsections, (slugs, subsection) => {
+              return (
+                <div key={subsection}>
+                  {subsection ? <h4>{subsection}</h4> : ""}
+                  {map(slugs, (slug) => (
+                    <li key={slug.path} className="writing-link">
+                      <Link to={slug.path}>{slug.name}</Link>
+                    </li>
+                  ))}
+                </div>
+              );
+            })}
           </div>
         );
       })}

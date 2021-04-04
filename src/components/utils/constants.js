@@ -5,4 +5,4 @@ export const TRACKING_EVENT = {
 
 export const COLOR_POOL = ["#ef476f", "#ffd166", "#06d6a0"];
 
-export const SHOW_RIGHT_SIDE = false;
+export const SHOW_RIGHT_SIDE = true;

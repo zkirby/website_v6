@@ -24,7 +24,7 @@ const LeftSide = () => (
       {/* <Emoji className="ml-2" symbol="🔍" label="hourglass" /> */}
     </h1>
     <p>
-      Hi there! My name is Zach, I'm a web-enthusiast with a passion for
+      Hi there! My name is Zach, I'm a FE web-developer with a passion for
       web-performance, productivity, and people.
     </p>
     {SHOW_RIGHT_SIDE ? (
