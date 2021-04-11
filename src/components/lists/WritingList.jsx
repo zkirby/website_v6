@@ -45,7 +45,7 @@ export default function WritingList() {
         const color = cp.pop();
 
         return (
-          <div key={section}>
+          <div key={section} className="mb-4">
             <h3 className="writing-link-title">{section}</h3>
 
             {map(subsections, (slugs, subsection) => {

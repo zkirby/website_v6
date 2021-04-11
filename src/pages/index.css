@@ -249,6 +249,12 @@ a:hover {
   font-family: var(--f-secondary-font);
 }
 
+.writing-text img {
+  height: 300px;
+  width: 100%;
+  object-fit: contain;
+}
+
 .writing-container .writing-text h1 {
   margin-bottom: 12px;
 }
