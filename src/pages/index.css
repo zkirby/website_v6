@@ -217,6 +217,17 @@ a:hover {
   color: var(--c-black) !important;
 }
 
+.breadcrumbs {
+  font-size: 1em;
+  color: var(--c-grey);
+  /* Give the illusion of being 
+   * positioned next to the home icon */
+  position: relative;
+  top: 20px;
+  left: 55px;
+  text-transform: lowercase;
+}
+
 /* Writing fluff */
 .writing-container .writing-fluff-selector {
   text-align: center;

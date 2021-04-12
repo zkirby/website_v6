@@ -1,17 +1,17 @@
 ---
 slug: "/projects/frontend/Web Audio Visualizer"
 section: "projects"
-subsection: "frontend"
+subsection: "Frontend"
 date: "2021-04-11"
 ---
 
-# Web.play
+# web.play
 
 **visit: [audio.play](https://zkirby.com/web_audio_visualizer/)**
 
 ![Home Screen](../../writing/audio-home.png)
 
-Web.play was inspired by FLStudio. At the time I was exploring the software and creating music through it as an (admittedly) short lived hobby. After coming to the stark realization that I was never going to be a great beat maker I put the FruityLoops aside - but I wasn't done exploring music. I started digging around the MDN docs looking for some sort of music related-project I could make with JS. I stumbled onto the WebAudio API and was immediately intrigued both with it's complexity and with the graph-like representation the docs detailed it in.
+Web.play was inspired by FLStudio. At the time I was exploring the software and creating music through it as an admittedly short lived hobby. After coming to the stark realization that I was never going to be a great beat maker I put the FruityLoops aside - but I wasn't done exploring music. I started digging around the MDN docs looking for some sort of music related-project I could make with JS. I stumbled onto the WebAudio API and was immediately intrigued both with it's complexity and with the graph-like representation the docs detailed it in.
 
 After a week or so digging around the documentation I was having a hard time visualizing the interactions between the various nodes and their roles. I liked the idea of building something that would bring tangibility to the audio nodes in a flowchart-esque representation and thus Web.play was born.
 
