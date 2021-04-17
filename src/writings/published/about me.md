@@ -9,7 +9,7 @@ doNotList: true
 ## Preface
 
 <p class="preface">
-I'm often drawn to the 'about' sections of people's websites. The web is naturally impersonal relative to face to face communication and there's something intriguing about getting to know people through what they choose to show via their web persona. Maybe it's just some subconscious tendency I've developed as a child of the social media age. Maybe it's []. More than likely it's just a preference. Nonetheless, since it's something I enjoy I wanted to carve out a nice section of my own little slice of the world wide web to talk a little more about myself. If that's something you are interested in - please read on. Otherwise, no harm no foul, maybe we'll meet in person one day for a much less one-sided introduction. I certainly hope so.
+I'm often drawn to the 'about' sections of people's websites. The web is naturally impersonal relative to face to face communication and there's something intriguing about getting to know people through what they choose to show via their web persona. Maybe it's a subconscious tendency I've developed as a child of the social media age. More than likely it's just a preference. Nonetheless, since it's something I enjoy I wanted to carve out a nice section of my own little slice of the world wide web to talk a little more about myself. If that's something you are interested in - please read on. Otherwise, no harm no foul, maybe we'll meet in person one day for a much less one-sided introduction. I certainly hope so.
 </p>
 
 ---
@@ -18,7 +18,7 @@ I'm often drawn to the 'about' sections of people's websites. The web is natural
 
 #### A Timeline
 
-A brief outline of all the various states of my life, roughly defined by the cities I've lived in. Having grown up in a military family, I've moved more times than most people my age. In my youth I considered these moves an unfortunate circumstance, but in adulthood I've grown to become extremely thankful for them. Living in the deeply conservative south TX to the extremely liberal Berkeley campus has afforded perspective and open-minded-by-default nature that has kind of come to define me as an individual.
+A brief outline of all the various states of my life, roughly defined by the cities I've lived in. Having grown up in a military family, I've moved quite a lot. In my youth I considered these relocations an unfortunate circumstance, but in adulthood I've grown to become extremely thankful for them. Living in the deeply conservative south TX to the extremely liberal Berkeley campus has afforded perspective and open-minded-by-default nature that has come to define me as an individual.
 
 - NorCal - 2 years.
   - I started my journey on rocket ship earth somewhere on an air force base in NorCal. I don't remember much of my time there, other than one oddly specific memory of eating Zachary's Pizza for the first time. Quite delicious - I recommend the spinach and mushroom.

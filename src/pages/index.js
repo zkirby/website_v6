@@ -9,7 +9,7 @@ import DefaultLeftSide from "../components/DefaultLeftSide";
 import WritingList from "../components/lists/WritingList";
 import RightSideSelector from "../components/RightSideSelector";
 
-import "./index.css";
+import "./index.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SHOW_RIGHT_SIDE } from "../components/utils/constants";
 

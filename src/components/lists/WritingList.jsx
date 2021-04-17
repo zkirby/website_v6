@@ -11,7 +11,6 @@ export default function WritingList() {
         edges {
           node {
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
               slug
               section
               subsection
